@@ -108,7 +108,8 @@ export function SocialProof() {
                     alt=""
                     width={80}
                     height={32}
-                    className="h-8 w-auto object-contain"
+                    unoptimized
+                    className="h-8 w-auto max-w-full object-contain"
                     loading="lazy"
                   />
                 </div>

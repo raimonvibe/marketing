@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+![Marketing Quest — SaaS marketing playbook banner](./marketing.png)
 
-First, run the development server:
+**Live site →** [https://marketing-hazel-seven.vercel.app/](https://marketing-hazel-seven.vercel.app/)
+
+</div>
+
+---
+
+## ◭ What this project is ◮
+
+**Marketing Quest** is a **story-driven, educational marketing site** for people who ship **digital products** — SaaS, web apps, and software tools. It does **not** sell a product directly. Instead it positions you as a guide: **free tutorials and quest-style chapters**, **Skill Unlocked** callouts (psychology + tests you can run), and **newsletter / playbook** CTAs for deeper material.
+
+The copy follows a **PAS + BAB hybrid** in **adventure mode**: the visitor is the struggling indie hero, old tactics are the villains, and your content is the map. Sections cover launch narrative, storytelling copy, demos, email, offers, retention, social proof, FAQs, and a final “start your saga” signup — all with **neumorphic** pastel UI, **dark mode**, and a playful “level up” tone.
+
+**Live deployment:** [marketing-hazel-seven.vercel.app](https://marketing-hazel-seven.vercel.app/) (Vercel).
+
+---
+
+## ⌖ Stack
+
+| Layer | Choice |
+| ------ | ------ |
+| Framework | **Next.js 15** (App Router) |
+| Styling | **Tailwind CSS v4** — soft shadows, slate/zinc pastels, `dark:` variants |
+| UI | **shadcn-style** primitives — `Button`, Radix **Accordion** |
+| Icons | **Lucide React** (per-icon imports) |
+| Theme | **next-themes** (system / light / dark) |
+| Images | `next/image` — local SVGs + README PNG under `public/` and root |
+
+---
+
+## ⚝ Project layout (high level)
+
+- `src/app/` — `layout.tsx` (SEO + OG), `page.tsx`, `globals.css`, `opengraph-image.tsx`
+- `src/components/sections/` — Navbar, Hero, Villains, Quests, Social proof, Paths, FAQ, Final CTA, Footer, Skill Unlocked, signup form
+- `src/components/ui/` — shared UI pieces
+- `public/` — quest SVGs, hero art, brand-strip placeholders
+
+---
+
+## 🜲 Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Production build:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+Set **`NEXT_PUBLIC_SITE_URL`** to your real domain in production so Open Graph `metadataBase` and share previews resolve correctly.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⧉ License / intent
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Educational showcase and lead-magnet positioning — not financial or legal advice. **Ship the narrative first** — specs can follow once the plot lands. ⎔

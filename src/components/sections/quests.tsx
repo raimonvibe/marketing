@@ -116,8 +116,10 @@ export function Quests() {
                     alt=""
                     width={520}
                     height={360}
+                    unoptimized
                     className="h-auto w-full object-contain"
                     loading="lazy"
+                    sizes="(max-width: 1024px) 100vw, 520px"
                   />
                 </div>
               </article>

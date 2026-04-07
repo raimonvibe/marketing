@@ -69,6 +69,7 @@ export function Hero() {
               width={440}
               height={550}
               priority
+              unoptimized
               className="h-full w-full object-cover opacity-95 dark:opacity-90"
             />
           </div>
