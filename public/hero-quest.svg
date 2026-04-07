@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e9d5ff"/>
+      <stop offset="50%" style="stop-color:#fae8ff"/>
+      <stop offset="100%" style="stop-color:#ddd6fe"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+    </filter>
+  </defs>
+  <rect width="400" height="500" rx="32" fill="url(#bg)"/>
+  <ellipse cx="200" cy="420" rx="140" ry="28" fill="#c4b5fd" opacity="0.35"/>
+  <path d="M120 140 L280 140 L260 320 L140 320 Z" fill="url(#shield)" opacity="0.9"/>
+  <path d="M135 155 L265 155 L250 305 L150 305 Z" fill="#f5f3ff" opacity="0.85"/>
+  <path d="M185 175 L215 175 L210 250 L190 250 Z" fill="#7c3aed" opacity="0.6"/>
+  <circle cx="200" cy="115" r="48" fill="#fef3c7" stroke="#fbbf24" stroke-width="4"/>
+  <path d="M185 108 L198 125 L220 95" stroke="#b45309" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="70" y="340" width="100" height="72" rx="16" fill="#e4e4e7" stroke="#a1a1aa" stroke-width="2"/>
+  <rect x="230" y="350" width="100" height="62" rx="14" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+  <circle cx="320" cy="180" r="36" fill="#fce7f3" filter="url(#soft)" opacity="0.8"/>
+  <text x="200" y="465" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#6b21a8" opacity="0.7">Your Map Awaits</text>
+</svg>

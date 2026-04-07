@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f1f5f9;
+  --foreground: #18181b;
+}
+
+.dark {
+  --background: #09090b;
+  --foreground: #fafafa;
 }
 
 @theme inline {
@@ -10,17 +17,52 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-outfit);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .neu-press {
+    @apply border border-zinc-200/90 bg-zinc-100 shadow-[6px_6px_14px_rgba(15,23,42,0.08),-4px_-4px_12px_rgba(255,255,255,0.9),inset_1px_1px_2px_rgba(255,255,255,0.85)] dark:border-zinc-700/80 dark:bg-zinc-900 dark:shadow-[5px_5px_14px_rgba(0,0,0,0.45),-3px_-3px_10px_rgba(63,63,70,0.25),inset_1px_1px_2px_rgba(82,82,91,0.15)];
+  }
+  .neu-float {
+    @apply border border-zinc-200/70 bg-slate-100/90 shadow-[10px_10px_24px_rgba(15,23,42,0.1),-8px_-8px_20px_rgba(255,255,255,0.95),inset_0_1px_0_rgba(255,255,255,0.85)] dark:border-zinc-700/60 dark:bg-zinc-900/80 dark:shadow-[8px_8px_22px_rgba(0,0,0,0.5),-4px_-4px_14px_rgba(39,39,42,0.3),inset_0_1px_0_rgba(63,63,70,0.2)];
+  }
+  .neu-icon {
+    @apply shadow-[4px_4px_10px_rgba(15,23,42,0.12),-3px_-3px_8px_rgba(255,255,255,0.9),inset_1px_1px_3px_rgba(255,255,255,0.9)] dark:shadow-[3px_3px_10px_rgba(0,0,0,0.4),-2px_-2px_6px_rgba(63,63,70,0.3),inset_1px_1px_2px_rgba(255,255,255,0.08)];
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0.85;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0.85;
+  }
+}
+
+.accordion-content[data-state="open"] {
+  animation: accordion-down 0.28s ease-out;
+}
+
+.accordion-content[data-state="closed"] {
+  animation: accordion-up 0.24s ease-out;
 }
