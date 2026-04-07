@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   BookOpen,
   Gem,
@@ -57,7 +56,7 @@ const quests = [
     icon: Wand2,
     hook: "Before you celebrated signup and vanished, you win with onboarding runes — tiny story beats in product that remind users why they started the quest.",
     win: "Small narrative nudges in week one frequently lift activation without adding engineering sprints.",
-    image: "/quest-6.svg",
+    image: "/quest-6-retention.svg",
   },
 ] as const;
 
@@ -111,15 +110,16 @@ export function Quests() {
                     reverse && "lg:order-1",
                   )}
                 >
-                  <Image
+                  {/* Native img: local SVGs load reliably from /public without the image optimizer. */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={q.image}
                     alt=""
                     width={520}
                     height={360}
-                    unoptimized
                     className="h-auto w-full object-contain"
                     loading="lazy"
-                    sizes="(max-width: 1024px) 100vw, 520px"
+                    decoding="async"
                   />
                 </div>
               </article>
